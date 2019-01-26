@@ -15,18 +15,6 @@ public class PlayerSelectorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (selectedObject)
-            {
-                print("Engage was pressed with a selection");
-            }
-            else
-            {
-                print("Engage was pressed without a selection");
-            }
-        }
-
         if (selectedObject)
         {
             Trashable trashable = selectedObject.GetComponent<Trashable>();
@@ -39,6 +27,24 @@ public class PlayerSelectorController : MonoBehaviour
                 else if (Input.GetKeyUp(KeyCode.F))
                 {
                     trashable.setTrashing(false);
+                }
+            }
+
+            var discoverable = selectedObject.GetComponent<Discoverable>();
+            if (discoverable != null)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+
+                    var wasDiscovered = discoverable.Discover();
+                    if (wasDiscovered)
+                    {
+                        print("You discovered an item.");
+                    }
+                    else
+                    {
+                        print("There is nothing left to discover about this item.");
+                    }
                 }
             }
         }
