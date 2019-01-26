@@ -39,7 +39,7 @@ public class Trashable : MonoBehaviour
 
     private void CheckIfFullyTrashed()
     {
-        if (percentTrashed >= 1f)
+        if (percentTrashed >= 0.8f)
         {
             Destroy(gameObject);
         }
