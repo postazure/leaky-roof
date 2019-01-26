@@ -26,6 +26,22 @@ public class PlayerSelectorController : MonoBehaviour
                 print("Engage was pressed without a selection");
             }
         }
+
+        if (selectedObject)
+        {
+            Trashable trashable = selectedObject.GetComponent<Trashable>();
+            if (trashable != null)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    trashable.setTrashing(true);
+                }
+                else if (Input.GetKeyUp(KeyCode.F))
+                {
+                    trashable.setTrashing(false);
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
