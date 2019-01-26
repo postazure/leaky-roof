@@ -6,7 +6,7 @@ public class Discoverable : MonoBehaviour
 {
     public int discoveryValue = 0;
 
-    private bool isDiscovered = false;
+    protected bool isDiscovered = false;
     private ToastController toastController;
     private ScoreController scoreController;
 
@@ -24,20 +24,28 @@ public class Discoverable : MonoBehaviour
         
     }
 
-    public bool Discover()
+    public virtual bool Discover()
     {
         if (isDiscovered)
         {
-            toastController.PublishToast("Nothing to discover");
+            if (toastController != null)
+            {
+                toastController.PublishToast("Nothing to discover");
+            }
             return false;
         }
         else
         {
             isDiscovered = true;
 
-            scoreController.IncrementScore(discoveryValue);
-            toastController.PublishToast("+" + discoveryValue + " Sentiment");
-
+            if (scoreController != null)
+            {
+                scoreController.IncrementScore(discoveryValue);
+            }
+            if (toastController != null)
+            {
+                toastController.PublishToast("+" + discoveryValue + " Sentiment");
+            }
             return true;
         }
 
