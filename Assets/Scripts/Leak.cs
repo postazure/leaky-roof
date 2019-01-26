@@ -11,14 +11,14 @@ public class Leak : MonoBehaviour
     public float initialDripDelay = 0;
 
     [Range(0.01f, int.MaxValue)]
-    public float secondsBetweenDrips = 1;
+    public float secondsBetweenDrips = 2;
 
     private float lastDripTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        var delay = initialDripDelay + UnityEngine.Random.Range(0, 1f);
+        var delay = initialDripDelay + UnityEngine.Random.Range(0, secondsBetweenDrips);
         lastDripTime = Time.fixedTime + delay;
     }
 

@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 0
   m_Name: Leak
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7261014291107130613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -107,4 +107,5 @@ MonoBehaviour:
   active: 1
   waterDrop: {fileID: 3762875976518818769, guid: d801ec4b27410486aa4743487cfd0ff8,
     type: 3}
-  secondsBetweenDrips: 1
+  initialDripDelay: 0
+  secondsBetweenDrips: 2
