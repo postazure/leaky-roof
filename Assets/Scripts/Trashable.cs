@@ -6,7 +6,7 @@ public class Trashable : MonoBehaviour
 {
     private bool isTrashing;
 
-    public float trashTime = 5f;
+    public float trashTime = 3f;
     public float percentTrashed = 0f;
 
     // Start is called before the first frame update
