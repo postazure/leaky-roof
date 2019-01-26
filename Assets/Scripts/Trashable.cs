@@ -21,23 +21,20 @@ public class Trashable : MonoBehaviour
 
     }
 
+    public void setTrashing(bool isTrashing)
+    {
+        this.isTrashing = isTrashing;
+    }
+
     private void FixedUpdate()
     {
         if (isTrashing)
         {
             percentTrashed += Time.fixedDeltaTime / trashTime;
             CheckIfFullyTrashed();
+            float scale = 1 - percentTrashed;
+            gameObject.transform.localScale = new Vector3(scale, scale, scale);
         }
-    }
-
-    private void OnMouseDown()
-    {
-        isTrashing = true;
-    }
-
-    private void OnMouseUp()
-    {
-        isTrashing = false;
     }
 
     private void CheckIfFullyTrashed()
