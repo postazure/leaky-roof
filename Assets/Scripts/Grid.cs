@@ -1,15 +1,48 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class Grid
+public class Grid
 {
-    static public Vector3 WorldPositionForGridCoords(Vector2 coords, float floorHeight)
+    private Vector3 floorScale;
+
+    public Grid(Vector3 floorScale)
     {
-        return new Vector3(coords.x, floorHeight / 2f, coords.y);
+        this.floorScale = floorScale;
     }
 
-    static public Vector2 GridCoordsForWorldPosition(Vector3 position)
+    public Vector3 WorldPositionForGridCoords(Coords coords)
     {
-        return new Vector2(position.x, position.z);
+        return new Vector3(coords.x - GetXOffset(), floorScale.y / 2f, coords.y - GetZOffset());
+    }
+
+    public Coords GridCoordsForWorldPosition(Vector3 position)
+    {
+        return new Coords((int)position.x + GetXOffset(), (int)position.z + GetZOffset());
+    }
+
+    private int GetZOffset()
+    {
+        return (int)(floorScale.z / 2);
+    }
+
+    private int GetXOffset()
+    {
+        return (int)(floorScale.x / 2);
+    }
+
+    public struct Coords
+    {
+        public int x, y;
+
+        public Coords(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public override string ToString()
+        {
+            return "[" + x + "][" + y + "]";
+        }
     }
 }
