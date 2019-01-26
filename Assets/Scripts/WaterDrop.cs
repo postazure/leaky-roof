@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WaterDrop : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);
-    }
+    // Removing water drops is handled by the Floor
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Destroy(gameObject);
+    //}
 }
