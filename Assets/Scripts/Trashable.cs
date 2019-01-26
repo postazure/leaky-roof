@@ -32,14 +32,14 @@ public class Trashable : MonoBehaviour
         {
             percentTrashed += Time.fixedDeltaTime / trashTime;
             CheckIfFullyTrashed();
-            float scale = 1 - percentTrashed;
+            float scale = (1 - percentTrashed) * 0.5f + 0.5f;
             gameObject.transform.localScale = new Vector3(scale, scale, scale);
         }
     }
 
     private void CheckIfFullyTrashed()
     {
-        if (percentTrashed >= 0.8f)
+        if (percentTrashed >= 1f)
         {
             Destroy(gameObject);
         }
