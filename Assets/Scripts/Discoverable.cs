@@ -42,7 +42,7 @@ public class Discoverable : MonoBehaviour
         {
             if (toastController != null)
             {
-                toastController.PublishToast("Nothing to discover");
+                toastController.PublishToast("Just trash.");
             }
             return false;
         }
