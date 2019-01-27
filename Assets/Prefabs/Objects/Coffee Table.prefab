@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7430297844280737208}
   - component: {fileID: 7430297844277345688}
   - component: {fileID: 7430297844278443864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1766667021267282326}
   - component: {fileID: 5790885582487109494}
   - component: {fileID: 7659004251427073526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coffee Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 7430297844280737212}
   - component: {fileID: 7430297844277345692}
   - component: {fileID: 7430297844278443868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 7430297844280737214}
   - component: {fileID: 7430297844277345694}
   - component: {fileID: 7430297844278443870}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube30
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7060355766273617536}
   - component: {fileID: 3705862126060266391}
   - component: {fileID: 2361538593176329952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pSphere1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6051998333373906858}
   - component: {fileID: 3383773340603484860}
   - component: {fileID: 7241246589092056290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 2594989569253878141}
   - component: {fileID: 7121588175638282955}
   - component: {fileID: 8916434984628430635}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 8317771508715958813}
   - component: {fileID: 5943146405918499869}
   - component: {fileID: 7376851463602689082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BilliardTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 5798070291378703087}
   - component: {fileID: 3789897151046053154}
   - component: {fileID: 7556268003777423024}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 4924019175924198857}
   - component: {fileID: 1486752135296028763}
   - component: {fileID: 8388426939468141754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

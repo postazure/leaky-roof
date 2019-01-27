@@ -72,7 +72,10 @@ public class PlayerSelectorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        selectedObject = other.gameObject;    
+        if (other.gameObject.layer == LayerMask.NameToLayer("Selectable"))
+        {
+            selectedObject = other.gameObject;    
+        }
     }
 
     private void OnTriggerExit(Collider other)

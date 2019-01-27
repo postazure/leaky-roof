@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7173690343221995028}
   - component: {fileID: 7145613519310625878}
   - component: {fileID: 6834318683649923195}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 9103074902097893236}
   - component: {fileID: 9103074902099220308}
   - component: {fileID: 9103074902100186516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 9103074902097893238}
   - component: {fileID: 9103074902099220310}
   - component: {fileID: 9103074902100186518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube11
   m_TagString: Untagged
   m_Icon: {fileID: 0}

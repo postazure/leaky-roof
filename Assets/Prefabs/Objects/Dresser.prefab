@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5201309945596900751}
   - component: {fileID: 7592539277152028252}
   - component: {fileID: 5144608063452997293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dresser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 1976242861532400481}
   - component: {fileID: 1976242861535791937}
   - component: {fileID: 1976242861534824833}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 1976242861532400483}
   - component: {fileID: 1976242861535791939}
   - component: {fileID: 1976242861534824835}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube36 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 1976242861532400487}
   - component: {fileID: 1976242861535791943}
   - component: {fileID: 1976242861534824839}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 1976242861532400489}
   - component: {fileID: 1976242861535791945}
   - component: {fileID: 1976242861534824841}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 1976242861532400493}
   - component: {fileID: 1976242861535791949}
   - component: {fileID: 1976242861534824845}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube36 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1976242861532400495}
   - component: {fileID: 1976242861535791951}
   - component: {fileID: 1976242861534824847}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube36
   m_TagString: Untagged
   m_Icon: {fileID: 0}

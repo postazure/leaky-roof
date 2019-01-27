@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4382702272323916053}
   - component: {fileID: 407128731259071657}
   - component: {fileID: 7642859499322177020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Oven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 97986243299785122}
   - component: {fileID: 97986243303209346}
   - component: {fileID: 97986243302210370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 97986243299785124}
   - component: {fileID: 97986243303209348}
   - component: {fileID: 97986243302210372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder20
   m_TagString: Untagged
   m_Icon: {fileID: 0}

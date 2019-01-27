@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2250180422928623254}
   - component: {fileID: 1399847715452361355}
   - component: {fileID: 6085878421435147210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8809925844952777920}
   - component: {fileID: 8809925844949910754}
   - component: {fileID: 8809925844950877730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8809925844952777922}
   - component: {fileID: 8809925844949910764}
   - component: {fileID: 8809925844950877740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8809925844952777924}
   - component: {fileID: 8809925844949910758}
   - component: {fileID: 8809925844950877734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 8809925844952777926}
   - component: {fileID: 8809925844949910752}
   - component: {fileID: 8809925844950877728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox3 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 8809925844952777928}
   - component: {fileID: 8809925844949910762}
   - component: {fileID: 8809925844950877738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 8809925844952777932}
   - component: {fileID: 8809925844949910766}
   - component: {fileID: 8809925844950877742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 8809925844952777934}
   - component: {fileID: 8809925844949910760}
   - component: {fileID: 8809925844950877736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 8809925844952777936}
   - component: {fileID: 8809925844949910770}
   - component: {fileID: 8809925844950877746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox3 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 8809925844952777938}
   - component: {fileID: 8809925844949910780}
   - component: {fileID: 8809925844950877756}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 8809925844952777940}
   - component: {fileID: 8809925844949910774}
   - component: {fileID: 8809925844950877750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: soggy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 8809925844952777942}
   - component: {fileID: 8809925844949910768}
   - component: {fileID: 8809925844950877744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox4 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 8809925844952777944}
   - component: {fileID: 8809925844949910778}
   - component: {fileID: 8809925844950877754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 8809925844952777946}
   - component: {fileID: 8809925844949910756}
   - component: {fileID: 8809925844950877732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox4 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 8809925844952777948}
   - component: {fileID: 8809925844949910782}
   - component: {fileID: 8809925844950877758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cardboardBox1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,7 +1233,7 @@ GameObject:
   - component: {fileID: 8809925844952777950}
   - component: {fileID: 8809925844949910776}
   - component: {fileID: 8809925844950877752}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}

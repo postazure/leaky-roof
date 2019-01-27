@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2749861006827741864}
   - component: {fileID: 8659641903669234607}
   - component: {fileID: 7843199401309529893}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Garbage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8164747954894050850}
   - component: {fileID: 8164747954896950796}
   - component: {fileID: 8164747954895951052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: soggy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8164747954894050858}
   - component: {fileID: 8164747954896950794}
   - component: {fileID: 8164747954895951050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8164747954894050860}
   - component: {fileID: 8164747954896950798}
   - component: {fileID: 8164747954895951054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}

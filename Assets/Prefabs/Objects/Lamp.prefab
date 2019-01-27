@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6720925357230525155}
   - component: {fileID: 6720925357229230787}
   - component: {fileID: 6720925357228230659}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pSphere2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6720925357230525161}
   - component: {fileID: 6720925357229230793}
   - component: {fileID: 6720925357228230665}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2461706421636536281}
   - component: {fileID: 5115986423020428982}
   - component: {fileID: 9145547481576898271}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 6720925357229230797}
   - component: {fileID: 6720925357228230669}
   - component: {fileID: 6664175378300455456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 6720925357230525167}
   - component: {fileID: 6720925357229230799}
   - component: {fileID: 6720925357228230671}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
