@@ -33,7 +33,8 @@ public class ScoreController : MonoBehaviour
         if(foundItems.Count == 0) return "You got nothing.";
 
         string scoredItemsString = "";
-        foundItems.ForEach((SentimentalItem obj) => { scoredItemsString += obj.name + "..." + obj.value + "\n"; });
+
+        foundItems.ForEach((SentimentalItem obj) => { scoredItemsString += Display(obj.name, obj.value.ToString()) + "\n"; });
 
         return scoredItemsString;
     }
@@ -44,5 +45,21 @@ public class ScoreController : MonoBehaviour
         foundItems.ForEach((SentimentalItem obj) => { score += obj.value; });
 
         return score;
+    }
+
+    public int FoundItemCount()
+    {
+        return foundItems.Count;
+    }
+
+    private string Display(string objName, string value)
+    {
+        int length = 40 - objName.Length + value.Length;
+        string dots = "";
+        for (int i = 0; i < length; i++)
+        {
+            dots += ".";
+        }
+        return objName + dots + value;
     }
 }
