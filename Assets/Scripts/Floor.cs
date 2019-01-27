@@ -13,7 +13,7 @@ public class Floor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grid = new Grid(transform.localScale);
+        grid = new Grid(transform);
 
         int rows = (int) Math.Floor(transform.localScale.x);
         int cols = (int) Math.Floor(transform.localScale.z);
