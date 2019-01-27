@@ -32,6 +32,8 @@ public class ScoreController : MonoBehaviour
 
     public string GetScoredItemsString()
     {
+        if(foundItems.Count == 0) return "You got nothing.";
+
         string scoredItemsString = "";
         foundItems.ForEach((SentimentalItem obj) => { scoredItemsString += obj.description + "..." + obj.value + "\n"; });
 
