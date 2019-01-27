@@ -46,6 +46,16 @@ public class Discoverable : MonoBehaviour
             {
                 toastController.PublishToast("+" + discoveryValue + " Sentiment");
             }
+
+            //// change mesh state to reflect discovery, if meshes exist
+            Transform closed = gameObject.transform.Find("closed");
+            Transform opened = gameObject.transform.Find("opened");
+            if (closed != null && opened != null)
+            {
+                closed.gameObject.SetActive(false);
+                opened.gameObject.SetActive(true);
+            }
+
             return true;
         }
 
