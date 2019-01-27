@@ -13,7 +13,11 @@ public class Leak : MonoBehaviour
     [Range(0.01f, int.MaxValue)]
     public float secondsBetweenDrips = 2;
 
+    [Range(0.01f, int.MaxValue)]
+    public float speedUpPerSecond = 0.02f;
+
     private float lastDripTime;
+    private float lastSpeedUpTime;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +29,20 @@ public class Leak : MonoBehaviour
     void FixedUpdate()
     {
         float now = Time.fixedTime;
-        bool shouldDrip = now - lastDripTime > secondsBetweenDrips;
 
+        bool shouldDrip = now - lastDripTime > secondsBetweenDrips;
         if (shouldDrip)
         {
             SpawnDrip();
             lastDripTime = now;
+        }
+
+        bool shouldSpeedUp = now - lastSpeedUpTime > 1f;
+        if (shouldSpeedUp)
+        {
+            secondsBetweenDrips -= speedUpPerSecond;
+            secondsBetweenDrips = Math.Max(0.2f, secondsBetweenDrips);
+            lastSpeedUpTime = now;
         }
     }
 
