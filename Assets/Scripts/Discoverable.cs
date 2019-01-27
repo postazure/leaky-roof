@@ -31,6 +31,24 @@ public class Discoverable : MonoBehaviour
 
     public virtual bool Discover()
     {
+
+        Light mylight = GetComponentInChildren<Light>();
+        if (mylight != null)
+        {
+            if (mylight.intensity > 2)
+            {
+                mylight.intensity = 2;
+            }
+            else if (mylight.intensity > 0)
+            {
+                mylight.intensity = 0;
+            }
+            else
+            {
+                mylight.intensity = 4;
+            }
+        }
+
         bool isDegraded = false;
         Degradeable degradeable = gameObject.GetComponent<Degradeable>();
         if (degradeable != null)
