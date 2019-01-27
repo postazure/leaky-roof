@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leak
       objectReference: {fileID: 0}
+    - target: {fileID: 7261014291107130613, guid: 78692f346fdae4be5a2d58a66fd88d33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7261014291107130609, guid: 78692f346fdae4be5a2d58a66fd88d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 215462169, guid: 4c4842c5fd7d3436badb17a6a2961305, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 215462172, guid: 4c4842c5fd7d3436badb17a6a2961305, type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,6 +532,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c4842c5fd7d3436badb17a6a2961305, type: 3}
+--- !u!1 &838344590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 215462169, guid: 4c4842c5fd7d3436badb17a6a2961305,
+    type: 3}
+  m_PrefabInstance: {fileID: 838344589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &838344591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838344590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 1
 --- !u!1001 &885234418
 PrefabInstance:
   m_ObjectHideFlags: 0
