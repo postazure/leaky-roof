@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5790885582487109494}
   - component: {fileID: 7659004251427073526}
   - component: {fileID: 7199047428897787702}
+  - component: {fileID: 1277472283674377124}
   m_Layer: 10
   m_Name: Coffee Table
   m_TagString: Untagged
@@ -246,6 +247,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1277472283674377124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430297844280697242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88161ea1a251dee4eb84e8db243ef27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7430297844280697244
 GameObject:
   m_ObjectHideFlags: 0
