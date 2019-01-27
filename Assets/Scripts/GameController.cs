@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
             {
 
 
-                if (!obj.hasBeenDiscovered())
+                if (obj.sentimentalItem != null && !obj.hasBeenDiscovered())
                 {
                     doEndGame = false;
                     return;
