@@ -33,6 +33,7 @@ public class PlayerSelectorController : MonoBehaviour
                 }
             }
 
+            var canPush = false;
             var discoverable = selectedObject.GetComponent<Discoverable>();
             if (discoverable != null)
             {
@@ -47,20 +48,21 @@ public class PlayerSelectorController : MonoBehaviour
                     else
                     {
                         print("There is nothing left to discover about this item.");
-                        // Attach an object to push
-                        if (selectedObject.GetComponent<Pushable>())
-                        {
-                            pushedObject = selectedObject.GetComponent<Rigidbody>();
-                            pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
-                            //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
-
-                            isPushing = true;
-
-                            float massFromDraggedItem = selectedObject.GetComponentsInChildren<Rigidbody>()[0].mass;
-                            FindObjectOfType<PlayerController>().AddMass(massFromDraggedItem / 3f);
-                        }
                     }
                 }
+            }
+
+            // Attach an object to push
+            if (selectedObject.GetComponent<Pushable>())
+            {
+                pushedObject = selectedObject.GetComponent<Rigidbody>();
+                pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
+                //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
+
+                isPushing = true;
+
+                float massFromDraggedItem = selectedObject.GetComponentsInChildren<Rigidbody>()[0].mass;
+                FindObjectOfType<PlayerController>().AddMass(massFromDraggedItem / 3f);
             }
         }
 
