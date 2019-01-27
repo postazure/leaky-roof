@@ -8,11 +8,15 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private Transform tr;
+    private PlayerSelectorController selector;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
+        selector = GetComponentInChildren<PlayerSelectorController>();
+        if (selector == null)
+            Debug.LogError("PlayerSelectorController not found on Player or its children.");
     }
 
     void FixedUpdate()
@@ -25,10 +29,13 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-        if (Mathf.Abs(moveVertical) != 0f || Mathf.Abs(moveHorizontal) !=  0f)
+        if (!selector.isPushing)
         {
-            Quaternion rotation = Quaternion.LookRotation(movement, Vector3.up);
-            transform.rotation = rotation;
+            if (Mathf.Abs(moveVertical) != 0f || Mathf.Abs(moveHorizontal) !=  0f)
+            {
+                Quaternion rotation = Quaternion.LookRotation(movement, Vector3.up);
+                transform.rotation = rotation;
+            }
         }
 
     }

@@ -7,7 +7,13 @@ public class PlayerSelectorController : MonoBehaviour
     private GameObject selectedObject;
 
     private Rigidbody pushedObject;
-    private bool isPushing = false;
+    [HideInInspector]
+    public bool isPushing { get; private set; }
+
+    private void Start()
+    {
+        isPushing = false;
+    }
 
     // Update is called once per frame
     void Update()
