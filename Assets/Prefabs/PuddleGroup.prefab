@@ -54,3 +54,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puddlePrefab: {fileID: 5289291238256133711, guid: 7b2564c9cc0bb47ce997fac5e16144f4,
     type: 3}
+  maxPuddleSplash: 0.33
