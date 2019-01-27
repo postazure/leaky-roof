@@ -23,17 +23,9 @@ public class PlayerSelectorController : MonoBehaviour
             Trashable trashable = selectedObject.GetComponent<Trashable>();
             if (trashable != null)
             {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    trashable.setTrashing(true);
-                }
-                else if (Input.GetKeyUp(KeyCode.F))
-                {
-                    trashable.setTrashing(false);
-                }
+                trashable.setTrashing(Input.GetButton("Trash"));
             }
 
-            var canPush = false;
             var discoverable = selectedObject.GetComponent<Discoverable>();
             if (discoverable != null)
             {
