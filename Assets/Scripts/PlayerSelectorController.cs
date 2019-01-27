@@ -6,11 +6,8 @@ public class PlayerSelectorController : MonoBehaviour
 {
     private GameObject selectedObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody pushedObject;
+    private bool isPushing = false;
 
     // Update is called once per frame
     void Update()
@@ -44,9 +41,26 @@ public class PlayerSelectorController : MonoBehaviour
                     else
                     {
                         print("There is nothing left to discover about this item.");
+                        // Attach an object to push
+                        if (selectedObject.GetComponent<Pushable>())
+                        {
+                            pushedObject = selectedObject.GetComponent<Rigidbody>();
+                            pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
+                            pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
+                            isPushing = true;
+                        }
                     }
                 }
             }
+        }
+
+        // Let go of an object I'm pushing
+        if (isPushing && Input.GetKeyUp(KeyCode.Space))
+        {
+            isPushing = false;
+            pushedObject.GetComponent<Pushable>().DetachToPlayer(transform.parent.gameObject);
+            pushedObject.constraints = RigidbodyConstraints.FreezeAll;
+            pushedObject = null;
         }
     }
 
