@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
-    public Puddle puddlePrefab;
+    public PuddleGroup puddleGroupPrefab;
 
-    private Puddle[,] puddles;
+    private PuddleGroup[,] puddleGroups;
     private Grid grid;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class Floor : MonoBehaviour
 
         int rows = (int) Math.Floor(transform.localScale.x);
         int cols = (int) Math.Floor(transform.localScale.z);
-        puddles = new Puddle[rows, cols];
+        puddleGroups = new PuddleGroup[rows, cols];
     }
 
     // Update is called once per frame
@@ -31,36 +31,36 @@ public class Floor : MonoBehaviour
         var waterDrop = other.gameObject.GetComponent<WaterDrop>();
         if (waterDrop)
         {
-            EnsurePuddleExistsAt(other.gameObject.transform.position);
+            EnsurePuddleGroupExistsAt(other.gameObject.transform.position);
             Destroy(other.gameObject);
         }
     }
 
-    private void EnsurePuddleExistsAt(Vector3 position)
+    private void EnsurePuddleGroupExistsAt(Vector3 position)
     {
-        //Debug.Log("Ensuring a puddle is at " + position);
+        //Debug.Log("Ensuring a puddle group is at " + position);
 
         Grid.Coords coords = grid.GridCoordsForWorldPosition(position);
-        Puddle puddle = puddles[coords.x, coords.y];
-        if (puddle)
+        PuddleGroup puddleGroup = puddleGroups[coords.x, coords.y];
+        if (puddleGroup)
         {
-            //Debug.Log("Puddle already at " + coords + ": " + puddlePercentage);
-            puddle.Increment();
+            //Debug.Log("Puddle group already at " + coords + ": " + puddlePercentage);
+            puddleGroup.Increment();
         }
         else
         {
-            //Debug.Log("Spawning new puddle at " + coords);
-            SpawnPuddle(coords);
+            //Debug.Log("Spawning new puddle group at " + coords);
+            SpawnPuddleGroup(coords);
         }
     }
 
-    private void SpawnPuddle(Grid.Coords coords)
+    private void SpawnPuddleGroup(Grid.Coords coords)
     {
         Vector3 puddlePosition = grid.WorldPositionForGridCoords(coords);
 
-        Puddle puddle = Instantiate(puddlePrefab, puddlePosition, Quaternion.identity);
-        puddle.Increment();
+        PuddleGroup puddleGroup = Instantiate(puddleGroupPrefab, puddlePosition, Quaternion.identity);
+        puddleGroup.Increment();
 
-        puddles[coords.x, coords.y] = puddle;
+        puddleGroups[coords.x, coords.y] = puddleGroup;
     }
 }

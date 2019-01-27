@@ -17,5 +17,11 @@ public class Puddle : MonoBehaviour
     internal void Increment()
     {
         percentageFull += percentPerDrop;
+        percentageFull = Math.Min(1, percentageFull);
+    }
+
+    public bool IsFull()
+    {
+        return percentageFull >= 1;
     }
 }
