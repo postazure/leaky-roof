@@ -77,6 +77,10 @@ public class PlayerSelectorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        selectedObject = null;
+
+        if(other.gameObject == selectedObject)
+        {
+            selectedObject = null;
+        }
     }
 }
