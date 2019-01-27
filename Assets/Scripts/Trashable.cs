@@ -7,8 +7,8 @@ public class Trashable : MonoBehaviour
     private bool isTrashing;
     private Vector3 initialScale;
 
-    public float trashTime = 3f;
-    public float percentTrashed = 0f;
+    private float trashTime = 1f;
+    private float percentTrashed = 0f;
 
     // Start is called before the first frame update
     void Start()
