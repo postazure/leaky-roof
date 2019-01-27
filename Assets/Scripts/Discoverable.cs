@@ -24,6 +24,12 @@ public class Discoverable : MonoBehaviour
         
     }
 
+    public bool hasBeenDiscovered ()
+    {
+        return isDiscovered;
+    }
+
+
     public virtual bool Discover()
     {
         bool isDegraded = false;
