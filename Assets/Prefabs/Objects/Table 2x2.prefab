@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4365222663525711123}
   - component: {fileID: 8097507852419767647}
   - component: {fileID: 9196089813330477780}
+  - component: {fileID: 5327316726292687723}
   m_Layer: 0
   m_Name: Table 2x2
   m_TagString: Untagged
@@ -106,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3bc9d8f0154b448b59a25fa2f36e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashTime: 5
-  percentTrashed: 0
 --- !u!114 &8097507852419767647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98f02035326147afbbc9c041dbad726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  discoveryValue: 10
+  sentimentalItem: {fileID: 0}
 --- !u!114 &9196089813330477780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +133,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentDegraded: 0
-  degradePerSecond: 0.1
   isDegrading: 0
-  degradedColor: {r: 0, g: 0, b: 0, a: 0}
+  isDegraded: 0
+--- !u!114 &5327316726292687723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078724560305551765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 0

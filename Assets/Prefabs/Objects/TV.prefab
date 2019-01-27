@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8946979817592437686}
   - component: {fileID: 7173690343221995028}
   - component: {fileID: 7145613519310625878}
+  - component: {fileID: 6834318683649923195}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -107,8 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3bc9d8f0154b448b59a25fa2f36e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashTime: 5
-  percentTrashed: 0
 --- !u!114 &7173690343221995028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98f02035326147afbbc9c041dbad726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  discoveryValue: 10
+  sentimentalItem: {fileID: 0}
 --- !u!114 &7145613519310625878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,9 +134,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentDegraded: 0
-  degradePerSecond: 0.1
   isDegrading: 0
-  degradedColor: {r: 0, g: 0, b: 0, a: 0}
+  isDegraded: 0
+--- !u!114 &6834318683649923195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103074902098185040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 0
 --- !u!1 &9103074902098185044
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,14 @@ public class Puddle : MonoBehaviour
     public float percentPerDrop = 0.1f;
 
     private float percentageFull;
+    public float PercentageFull
+    {
+        get
+        {
+            return percentageFull;
+        }
+    }
+
     private Vector3 initialScale;
 
     private void Start()

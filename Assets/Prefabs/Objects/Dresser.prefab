@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 868962158}
   - component: {fileID: 5201309945596900751}
   - component: {fileID: 7592539277152028252}
+  - component: {fileID: 5144608063452997293}
   m_Layer: 0
   m_Name: Dresser
   m_TagString: Untagged
@@ -112,9 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentDegraded: 0
-  degradePerSecond: 0.1
   isDegrading: 0
-  degradedColor: {r: 0, g: 0, b: 0, a: 0}
+  isDegraded: 0
 --- !u!114 &868962157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3bc9d8f0154b448b59a25fa2f36e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashTime: 5
-  percentTrashed: 0
 --- !u!114 &868962158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98f02035326147afbbc9c041dbad726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  discoveryValue: 10
+  sentimentalItem: {fileID: 0}
 --- !u!54 &5201309945596900751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,6 +168,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88161ea1a251dee4eb84e8db243ef27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5144608063452997293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801231468658090243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 0
 --- !u!1 &1976242861532632897
 GameObject:
   m_ObjectHideFlags: 0

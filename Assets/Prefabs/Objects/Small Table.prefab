@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5560976785475007483}
   - component: {fileID: 5560976785473680347}
   - component: {fileID: 5560976785472712987}
+  - component: {fileID: 8590128597352347032}
   m_Layer: 0
   m_Name: Small Table
   m_TagString: Untagged
@@ -77,3 +78,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8590128597352347032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560976785474711515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 0
