@@ -45,6 +45,12 @@ public class Floor : MonoBehaviour
         if (puddleGroup)
         {
             //Debug.Log("Puddle group already at " + coords + ": " + puddlePercentage);
+            if (puddleGroup.IsFull())
+            {
+                Grid.Coords adjacentCoords = puddleGroup.HeadCoords() + new Grid.Coords(1, 0);
+                PuddleGroup adjacentGroup = SpawnPuddleGroup(adjacentCoords);
+                puddleGroup.SetOverflowGroup(adjacentGroup);
+            }
             puddleGroup.Increment();
         }
         else
@@ -54,13 +60,16 @@ public class Floor : MonoBehaviour
         }
     }
 
-    private void SpawnPuddleGroup(Grid.Coords coords)
+    private PuddleGroup SpawnPuddleGroup(Grid.Coords coords)
     {
         Vector3 puddlePosition = grid.WorldPositionForGridCoords(coords);
 
         PuddleGroup puddleGroup = Instantiate(puddleGroupPrefab, puddlePosition, Quaternion.identity);
+        puddleGroup.Init(coords);
         puddleGroup.Increment();
 
         puddleGroups[coords.x, coords.y] = puddleGroup;
+
+        return puddleGroup;
     }
 }

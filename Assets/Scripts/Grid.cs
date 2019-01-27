@@ -47,5 +47,10 @@ public class Grid
         {
             return "[" + x + "][" + y + "]";
         }
+
+        public static Coords operator +(Coords a, Coords b)
+        {
+            return new Coords(a.x + b.x, a.y + b.y);
+        }
     }
 }
