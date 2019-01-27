@@ -19,6 +19,13 @@ ModelImporter:
     100026: cardboardBox3 2
     100028: cardboardBox4 2
     100030: cardboardBox_soggy
+    100032: books
+    100034: pCube42
+    100036: pCube43
+    100038: pCube46
+    100040: pCube47
+    100042: pCube48
+    100044: pCube50
     400000: //RootNode
     400002: cardboardBox1
     400004: cardboardBox1 1
@@ -35,6 +42,13 @@ ModelImporter:
     400026: cardboardBox3 2
     400028: cardboardBox4 2
     400030: cardboardBox_soggy
+    400032: books
+    400034: pCube42
+    400036: pCube43
+    400038: pCube46
+    400040: pCube47
+    400042: pCube48
+    400044: pCube50
     2100000: lambert1
     2300000: cardboardBox1
     2300002: cardboardBox1 1
@@ -51,6 +65,12 @@ ModelImporter:
     2300024: cardboardBox3 2
     2300026: cardboardBox4 2
     2300028: cardboardBox_soggy
+    2300030: pCube42
+    2300032: pCube43
+    2300034: pCube46
+    2300036: pCube47
+    2300038: pCube48
+    2300040: pCube50
     3300000: cardboardBox1
     3300002: cardboardBox1 1
     3300004: cardboardBox2
@@ -66,6 +86,12 @@ ModelImporter:
     3300024: cardboardBox3 2
     3300026: cardboardBox4 2
     3300028: cardboardBox_soggy
+    3300030: pCube42
+    3300032: pCube43
+    3300034: pCube46
+    3300036: pCube47
+    3300038: pCube48
+    3300040: pCube50
     4300000: cardboardBox_closed
     4300002: cardboardBox4
     4300004: cardboardBox3
@@ -81,6 +107,12 @@ ModelImporter:
     4300024: cardboardBox3
     4300026: cardboardBox2
     4300028: cardboardBox1
+    4300030: pCube50
+    4300032: pCube48
+    4300034: pCube42
+    4300036: pCube43
+    4300038: pCube46
+    4300040: pCube47
   externalObjects: {}
   materials:
     importMaterials: 1
