@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Discoverable : MonoBehaviour
 {
-    public int discoveryValue = 0;
     public SentimentalItem sentimentalItem;
 
     protected bool isDiscovered = false;
     private ToastController toastController;
-    private ScoreController scoreController;
 
     // Start is called before the first frame update
     void Start()
     {
         toastController = FindObjectOfType<ToastController>();
-        scoreController = FindObjectOfType<ScoreController>();
 
         // If sentimentalItem not set, defaults to nothing to see here
         if (sentimentalItem == null)
@@ -53,10 +50,11 @@ public class Discoverable : MonoBehaviour
         {
             isDiscovered = true;
 
-            if (scoreController != null)
+            if (sentimentalItem.value > 0)
             {
-                scoreController.IncrementScore(discoveryValue);
+                ScoreController.instance.ScoreItem(sentimentalItem);
             }
+
             if (toastController != null)
             {
                 toastController.PublishToast(sentimentalItem);
