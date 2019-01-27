@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class ToastController : MonoBehaviour
 {
-    public int toastDurationInSeconds;
+    public float toastDurationInSeconds;
 
-    public Image toastIcon;
+    public GameObject toastImageContainer;
+    public Image toastImage;
     public TMPro.TextMeshProUGUI description;
     public TMPro.TextMeshProUGUI score;
     public GameObject toastContainer;
@@ -19,7 +20,6 @@ public class ToastController : MonoBehaviour
     }
 
     private double? toastTimeStart;
-    private List<Toast> toastQueue = new List<Toast>();
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class ToastController : MonoBehaviour
     public void PublishToast(string message)
     {
         var toast = new Toast { description = message };
-        toastQueue.Add(toast);
+        DisplayToast(toast);
     }
     
     public void PublishToast(string message, Sprite icon, int score)
@@ -46,7 +46,7 @@ public class ToastController : MonoBehaviour
             icon = icon,
             score = score == 0 ? string.Empty : score.ToString()
         };
-        toastQueue.Add(toast);
+        DisplayToast(toast);
     }
     
     public void PublishToast(SentimentalItem item)
@@ -64,13 +64,7 @@ public class ToastController : MonoBehaviour
                 toastTimeStart = null;
             }
         }
-        else if (toastQueue.Count > 0)
-        {
-            var toast = toastQueue[0];
-            toastQueue.RemoveAt(0);
-            DisplayToast(toast);
-        }
-
+ 
     }
 
     private void DisplayToast(Toast toast)
@@ -80,12 +74,12 @@ public class ToastController : MonoBehaviour
         // Handle Icon
         if (toast.icon == null)
         {
-            toastIcon.gameObject.SetActive(false);
+            toastImageContainer.SetActive(false);
         }
         else
         {
-            toastIcon.gameObject.SetActive(true);
-            toastIcon.sprite = toast.icon;
+            toastImageContainer.SetActive(true);
+            toastImage.sprite = toast.icon;
         }
 
         // Handle score
@@ -96,7 +90,7 @@ public class ToastController : MonoBehaviour
         else
         {
             score.gameObject.SetActive(true);
-           score.text = toast.score;
+           score.text = "+ " + toast.score;
         }
 
         description.text = toast.description;
