@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trashable : MonoBehaviour
 {
     private bool isTrashing;
+    private Vector3 initialScale;
 
     public float trashTime = 3f;
     public float percentTrashed = 0f;
@@ -12,7 +13,7 @@ public class Trashable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        initialScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -32,8 +33,8 @@ public class Trashable : MonoBehaviour
         {
             percentTrashed += Time.fixedDeltaTime / trashTime;
             CheckIfFullyTrashed();
-            float scale = (1 - percentTrashed) * 0.5f + 0.5f;
-            gameObject.transform.localScale = new Vector3(scale, scale, scale);
+            float scale =  (1 - percentTrashed) * 0.5f + 0.5f;
+            gameObject.transform.localScale = new Vector3(scale * initialScale.x, scale * initialScale.y, scale * initialScale.z);
         }
     }
 
