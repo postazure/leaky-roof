@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: "A female looks very young as she stands next a man. Behind them is
-    the Monumento a la Revoluci\xF3n.  "
+    the Monumento a la Revoluci\xF3n."
   value: 130
   image: {fileID: 21300000, guid: 5cc891c74cc4f4f5a9da8be3f39ce7c4, type: 3}

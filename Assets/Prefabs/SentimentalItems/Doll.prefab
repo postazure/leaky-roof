@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: "A doll has been tossed. The doll\u2019s face is painted as a skull.
-    Its dress was once a rich red color.\uFEFF"
+    Its dress was once a rich red color."
   value: 110
   image: {fileID: 21300000, guid: aed14c3dc4df24cd7ba15040ec0abf6a, type: 3}

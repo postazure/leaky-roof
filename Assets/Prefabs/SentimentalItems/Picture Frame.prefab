@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba634c9602ab48c9b8fc3d5f410349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "A picture frame with photo: A man in his 40s is wearing a straw hat.
-    His dark skin glistens in the glaring sunlight.\uFEFF"
+  description: 'A picture frame with photo: A man in his 40s is wearing a straw hat.
+    His dark skin glistens in the glaring sunlight.'
   value: 150
   image: {fileID: 21300000, guid: e8a41603912d342739b7b952d85e81c7, type: 3}

@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: "A wooden bowl rests on a dusty cabinet: A simple object hand hewn
-    from wood. Colorful flowers are painted on the bowl\u2019s surface.\uFEFF"
+    from wood. Colorful flowers are painted on the bowl\u2019s surface."
   value: 90
   image: {fileID: 21300000, guid: 9abeec168179149c8adc442753e59ac8, type: 3}

@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba634c9602ab48c9b8fc3d5f410349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Heart shaped necklace locket
+  description: Heart shaped necklace locket.
   value: 40
   image: {fileID: 21300000, guid: 16f7b78c49dcd4ba4afbc6b939ffe216, type: 3}
