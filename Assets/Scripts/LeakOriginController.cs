@@ -6,14 +6,14 @@ public class LeakOriginController : MonoBehaviour
 {
     public GameObject leakPrefab;
     public List<GameObject> leakOriginLocations;
-    public float intervaulDurationSeconds;
+    public float newLeakInterval = 10f;
 
     private float lastLeakStartTime = 0f;
     private GameObject leak;
 
     void Update()
     {
-        if(Time.fixedTime - lastLeakStartTime > intervaulDurationSeconds && leakOriginLocations.Count > 0)
+        if(Time.fixedTime - lastLeakStartTime > newLeakInterval && leakOriginLocations.Count > 0)
         {
             StartNextLeak();
         }
