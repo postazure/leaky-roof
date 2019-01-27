@@ -5,7 +5,7 @@ public class PuddleGroup : MonoBehaviour
 {
     public Puddle puddlePrefab;
     public float maxPuddleSplash = 0.25f;
-    public int maxPuddles = 5;
+    public int maxPuddleWater = 5;
 
     private Grid.Coords coords;
     private List<Puddle> puddles = new List<Puddle>();
@@ -51,7 +51,9 @@ public class PuddleGroup : MonoBehaviour
 
     private bool IsThisGroupFull()
     {
-        return puddles.Count >= maxPuddles && puddles.TrueForAll(p => p.IsFull());
+        float amountOfWater = 0f;
+        puddles.ForEach(p => amountOfWater += p.PercentageFull);
+        return amountOfWater >= maxPuddleWater;
     }
 
     private bool IsOverflowGroupFull()
@@ -66,11 +68,17 @@ public class PuddleGroup : MonoBehaviour
             return overflowGroup.FindOrAddPuddle();
         }
 
-        Puddle puddle = puddles.Find(p => !p.IsFull());
-        if (!puddle)
+        List<Puddle> availablePuddles = puddles.FindAll(p => !p.IsFull());
+        if (availablePuddles.Count == 0)
         {
-            Vector3 position = new Vector3(RandomPuddleSplash(), 0, RandomPuddleSplash());
-            puddle = AddPuddle(position);
+            return AddPuddle(RandomPuddlePosition());
+        }
+
+        Puddle puddle = availablePuddles[Random.Range(0, availablePuddles.Count)];
+        float percentChanceForNewPuddle = puddle.PercentageFull / 2f; // the fuller the puddle gets, the more likely it is to splash and create a new one
+        if (Random.Range(0f, 1f) <= percentChanceForNewPuddle)
+        {
+            return AddPuddle(RandomPuddlePosition());
         }
 
         return puddle;
@@ -79,6 +87,11 @@ public class PuddleGroup : MonoBehaviour
     internal Grid.Coords HeadCoords()
     {
         return overflowGroup ? overflowGroup.HeadCoords() : coords;
+    }
+
+    private Vector3 RandomPuddlePosition()
+    {
+        return new Vector3(RandomPuddleSplash(), 0, RandomPuddleSplash());
     }
 
     private float RandomPuddleSplash()
