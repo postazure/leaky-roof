@@ -23,8 +23,9 @@ public class GameController : MonoBehaviour
             {
 
 
-                if (obj.sentimentalItem != null && !obj.hasBeenDiscovered())
+                if (obj.sentimentalItem != null && obj.sentimentalItem.name != "Nothing To See Here" && !obj.hasBeenDiscovered())
                 {
+                    Debug.Log(obj.sentimentalItem.name + " not found on " + obj.gameObject.name);
                     doEndGame = false;
                     return;
                 }
