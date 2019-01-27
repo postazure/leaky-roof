@@ -230,7 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secPerShake: 0.05
   shakeIntensity: 0.05
-  isShaking: 0
 --- !u!54 &7199047428897787702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -239,7 +238,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7430297844280697242}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
