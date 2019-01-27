@@ -14,6 +14,11 @@ ModelImporter:
     100016: cardboardBox4 1
     100018: cardboardBox_closed
     100020: cardboardBox_opened
+    100022: cardboardBox1 2
+    100024: cardboardBox2 2
+    100026: cardboardBox3 2
+    100028: cardboardBox4 2
+    100030: cardboardBox_soggy
     400000: //RootNode
     400002: cardboardBox1
     400004: cardboardBox1 1
@@ -25,6 +30,11 @@ ModelImporter:
     400016: cardboardBox4 1
     400018: cardboardBox_closed
     400020: cardboardBox_opened
+    400022: cardboardBox1 2
+    400024: cardboardBox2 2
+    400026: cardboardBox3 2
+    400028: cardboardBox4 2
+    400030: cardboardBox_soggy
     2100000: lambert1
     2300000: cardboardBox1
     2300002: cardboardBox1 1
@@ -36,6 +46,11 @@ ModelImporter:
     2300014: cardboardBox4 1
     2300016: cardboardBox_closed
     2300018: cardboardBox_opened
+    2300020: cardboardBox1 2
+    2300022: cardboardBox2 2
+    2300024: cardboardBox3 2
+    2300026: cardboardBox4 2
+    2300028: cardboardBox_soggy
     3300000: cardboardBox1
     3300002: cardboardBox1 1
     3300004: cardboardBox2
@@ -46,6 +61,11 @@ ModelImporter:
     3300014: cardboardBox4 1
     3300016: cardboardBox_closed
     3300018: cardboardBox_opened
+    3300020: cardboardBox1 2
+    3300022: cardboardBox2 2
+    3300024: cardboardBox3 2
+    3300026: cardboardBox4 2
+    3300028: cardboardBox_soggy
     4300000: cardboardBox_closed
     4300002: cardboardBox4
     4300004: cardboardBox3
@@ -56,6 +76,11 @@ ModelImporter:
     4300014: cardboardBox3
     4300016: cardboardBox2
     4300018: cardboardBox1
+    4300020: cardboardBox_soggy
+    4300022: cardboardBox4
+    4300024: cardboardBox3
+    4300026: cardboardBox2
+    4300028: cardboardBox1
   externalObjects: {}
   materials:
     importMaterials: 1
