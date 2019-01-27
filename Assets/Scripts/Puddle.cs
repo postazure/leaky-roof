@@ -1,18 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Puddle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float percentPerDrop = 0.1f;
+
+    private float percentageFull;
+
+    private void Update()
     {
-        
+        transform.localScale = new Vector3(percentageFull, transform.localScale.y, percentageFull);
     }
 
-    // Update is called once per frame
-    void Update()
+    internal void Increment()
     {
-        
+        percentageFull += percentPerDrop;
     }
 }

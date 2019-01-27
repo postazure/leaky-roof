@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
-    public GameObject puddle;
+    public Puddle puddlePrefab;
 
-    private float[,] puddlePercentages;
+    private Puddle[,] puddles;
     private Grid grid;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class Floor : MonoBehaviour
 
         int rows = (int) Math.Floor(transform.localScale.x);
         int cols = (int) Math.Floor(transform.localScale.z);
-        puddlePercentages = new float[rows, cols];
+        puddles = new Puddle[rows, cols];
     }
 
     // Update is called once per frame
@@ -41,10 +41,11 @@ public class Floor : MonoBehaviour
         //Debug.Log("Ensuring a puddle is at " + position);
 
         Grid.Coords coords = grid.GridCoordsForWorldPosition(position);
-        float puddlePercentage = puddlePercentages[coords.x, coords.y];
-        if (puddlePercentage > 0)
+        Puddle puddle = puddles[coords.x, coords.y];
+        if (puddle)
         {
             //Debug.Log("Puddle already at " + coords + ": " + puddlePercentage);
+            puddle.Increment();
         }
         else
         {
@@ -56,8 +57,10 @@ public class Floor : MonoBehaviour
     private void SpawnPuddle(Grid.Coords coords)
     {
         Vector3 puddlePosition = grid.WorldPositionForGridCoords(coords);
-        Instantiate(puddle, puddlePosition, Quaternion.identity);
 
-        puddlePercentages[coords.x, coords.y] += 0.0001f;
+        Puddle puddle = Instantiate(puddlePrefab, puddlePosition, Quaternion.identity);
+        puddle.Increment();
+
+        puddles[coords.x, coords.y] = puddle;
     }
 }
