@@ -26,7 +26,14 @@ public class Discoverable : MonoBehaviour
 
     public virtual bool Discover()
     {
-        if (isDiscovered)
+        bool isDegraded = false;
+        Degradeable degradeable = gameObject.GetComponent<Degradeable>();
+        if (degradeable != null)
+        {
+            isDegraded = degradeable.isDegraded;
+        }
+
+        if (isDiscovered || isDegraded)
         {
             if (toastController != null)
             {
