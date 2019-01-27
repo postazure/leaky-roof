@@ -5,6 +5,7 @@ using UnityEngine;
 public class Discoverable : MonoBehaviour
 {
     public int discoveryValue = 0;
+    public SentimentalItem sentimentalItem;
 
     protected bool isDiscovered = false;
     private ToastController toastController;
