@@ -53,7 +53,11 @@ public class PlayerSelectorController : MonoBehaviour
                             pushedObject = selectedObject.GetComponent<Rigidbody>();
                             pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
                             //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
+
                             isPushing = true;
+
+                            float massFromDraggedItem = selectedObject.GetComponentsInChildren<Rigidbody>()[0].mass;
+                            FindObjectOfType<PlayerController>().AddMass(massFromDraggedItem / 3f);
                         }
                     }
                 }
@@ -67,6 +71,8 @@ public class PlayerSelectorController : MonoBehaviour
             pushedObject.GetComponent<Pushable>().DetachToPlayer(transform.parent.gameObject);
             //pushedObject.constraints = RigidbodyConstraints.None;
             pushedObject = null;
+
+            FindObjectOfType<PlayerController>().ResetMass();
         }
     }
 
@@ -74,7 +80,7 @@ public class PlayerSelectorController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Selectable"))
         {
-            selectedObject = other.gameObject;    
+            selectedObject = other.gameObject;
         }
     }
 
