@@ -7,13 +7,12 @@ public class Degradeable : MonoBehaviour
     [Range(0, 1)]
     public float percentDegraded = 0;
 
-    [Range(0, 1)]
-    public float degradePerSecond = 0.1f;
+    private float degradePerSecond = 0.05f; // 20sec
 
     public bool isDegrading;
     public bool isDegraded;
 
-    public Color degradedColor;
+    private Color degradedColor = new Color(.3f, .3f, .3f);
 
     private Color initialColor;
 
