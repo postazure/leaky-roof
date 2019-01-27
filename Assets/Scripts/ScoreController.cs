@@ -15,7 +15,6 @@ public class ScoreController : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this);
         }
         else
         {
@@ -28,6 +27,8 @@ public class ScoreController : MonoBehaviour
     {
         print("Scored an item: " + item.name);
         foundItems.Add(item);
+
+        print("Found Items: " + foundItems.Count);
     }
 
     public string GetScoredItemsString()
