@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class Grid
 {
-    private Vector3 floorScale;
+    private Transform floorTransform;
 
-    public Grid(Vector3 floorScale)
+    public Grid(Transform floorTransform)
     {
-        this.floorScale = floorScale;
+        this.floorTransform = floorTransform;
     }
 
     public Vector3 WorldPositionForGridCoords(Coords coords)
     {
-        return new Vector3(coords.x - GetXOffset(), floorScale.y / 2f, coords.y - GetZOffset());
+        float x = coords.x - GetXOffset();
+        float y = floorTransform.position.y + floorTransform.localScale.y / 2f;
+        float z = coords.y - GetZOffset();
+        return new Vector3(x, y, z);
     }
 
     public Coords GridCoordsForWorldPosition(Vector3 position)
@@ -22,12 +25,12 @@ public class Grid
 
     private int GetZOffset()
     {
-        return (int)(floorScale.z / 2);
+        return (int)(floorTransform.localScale.z / 2);
     }
 
     private int GetXOffset()
     {
-        return (int)(floorScale.x / 2);
+        return (int)(floorTransform.localScale.x / 2);
     }
 
     public struct Coords
