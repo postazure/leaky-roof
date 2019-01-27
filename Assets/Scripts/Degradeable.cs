@@ -12,34 +12,29 @@ public class Degradeable : MonoBehaviour
     public bool isDegrading;
     public bool isDegraded;
 
-    private Color degradedColor = new Color(.3f, .3f, .3f);
+    private Color degradedColor = new Color(.1f, .1f, .15f);
 
     private Color initialColor;
 
-    Renderer GetRenderer()
+    List<Renderer> GetRenderers()
     {
         //// for prefab objects like Box, which have multiple different
         //// meshes as children for the different states, there will not be 
         //// a top-level renderer
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer == null)
-        {
-            renderer = GetComponentInChildren<Renderer>();
-        }
-        return renderer;
+        return new List<Renderer>(GetComponentsInChildren<Renderer>());
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        initialColor = GetRenderer().material.color;
+        initialColor = GetRenderers()[0].material.color;
     }
 
     // Update is called once per frame
     void Update()
     {
         var currentColor = Color.Lerp(initialColor, degradedColor, percentDegraded);
-        GetRenderer().material.color = currentColor;
+        GetRenderers().ForEach(r => r.material.color = currentColor);
     }
 
     private void FixedUpdate()
