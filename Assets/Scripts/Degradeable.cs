@@ -62,6 +62,13 @@ public class Degradeable : MonoBehaviour
                     //// set the soggy state active
                     soggy.gameObject.SetActive(true);
                 }
+
+                //// destroy Discoverable component if exists
+                Discoverable discoverable = gameObject.GetComponent<Discoverable>();
+                if (discoverable != null)
+                {
+                    Destroy(discoverable);
+                }
             }
         }
     }
