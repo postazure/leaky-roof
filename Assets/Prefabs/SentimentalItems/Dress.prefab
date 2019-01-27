@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &910320529702039113
+--- !u!1 &4700550933921271130
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7012009207520949538}
-  - component: {fileID: 355223732609295400}
+  - component: {fileID: 5061445443564486941}
+  - component: {fileID: 7906117444982899677}
   m_Layer: 0
-  m_Name: Locket
+  m_Name: Dress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7012009207520949538
+--- !u!4 &5061445443564486941
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910320529702039113}
+  m_GameObject: {fileID: 4700550933921271130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.2872024, y: 8.612107, z: -0.46031862}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,18 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355223732609295400
+--- !u!114 &7906117444982899677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910320529702039113}
+  m_GameObject: {fileID: 4700550933921271130}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ba634c9602ab48c9b8fc3d5f410349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Heart shaped necklace locket
-  value: 40
-  image: {fileID: 21300000, guid: 16f7b78c49dcd4ba4afbc6b939ffe216, type: 3}
+  description: "In a trash bag, with clothes inside,  a colorful Quincea\xF1era dress
+    is tucked among some old t-shirts."
+  value: 210
+  image: {fileID: 21300000, guid: 2d76a1676122c49d8aec73ce8618e7e4, type: 3}
