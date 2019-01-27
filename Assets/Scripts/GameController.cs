@@ -9,14 +9,15 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        discoverables = FindObjectsOfType<Discoverable>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         var doEndGame = true;
-
+        discoverables = FindObjectsOfType<Discoverable>();
+        Debug.Log("Discoverable count=" + discoverables.Length);
         foreach(Discoverable obj in discoverables) {
             try
             {
