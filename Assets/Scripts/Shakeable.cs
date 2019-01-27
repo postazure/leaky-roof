@@ -6,8 +6,17 @@ public class Shakeable : MonoBehaviour
 {
     public float secPerShake = 0.05f;
     public float shakeIntensity = 0.05f;
-    public bool isShaking = false;
+    public bool IsShaking
+    {
+        get => isShaking; 
+        set
+        {
+            isShaking = value;
+            originPosition = transform.position;
+        }
+    }
 
+    private bool isShaking = false;
     private Vector3 originPosition;
     private float lastDirectionChangeTime;
     private Vector3 currentDestination;
@@ -19,7 +28,7 @@ public class Shakeable : MonoBehaviour
 
     void Update()
     {
-        if (!isShaking) return;
+        if (!IsShaking) return;
 
         float now = Time.fixedTime;
 

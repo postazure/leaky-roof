@@ -52,7 +52,7 @@ public class PlayerSelectorController : MonoBehaviour
                         {
                             pushedObject = selectedObject.GetComponent<Rigidbody>();
                             pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
-                            pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
+                            //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
                             isPushing = true;
                         }
                     }
@@ -65,7 +65,7 @@ public class PlayerSelectorController : MonoBehaviour
         {
             isPushing = false;
             pushedObject.GetComponent<Pushable>().DetachToPlayer(transform.parent.gameObject);
-            pushedObject.constraints = RigidbodyConstraints.FreezeAll;
+            //pushedObject.constraints = RigidbodyConstraints.None;
             pushedObject = null;
         }
     }

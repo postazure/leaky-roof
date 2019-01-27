@@ -23,7 +23,7 @@ public class Trashable : MonoBehaviour
         Shakeable shakeable = GetComponent<Shakeable>();
         if (shakeable)
         {
-            shakeable.isShaking = isTrashing;
+            shakeable.IsShaking = isTrashing;
         }
     }
 
