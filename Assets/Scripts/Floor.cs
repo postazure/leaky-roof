@@ -20,23 +20,17 @@ public class Floor : MonoBehaviour
         puddleGroups = new PuddleGroup[rows, cols];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         var waterDrop = other.gameObject.GetComponent<WaterDrop>();
         if (waterDrop)
         {
-            EnsurePuddleGroupExistsAt(other.gameObject.transform.position);
+            AddWaterAt(other.gameObject.transform.position);
             Destroy(other.gameObject);
         }
     }
 
-    private void EnsurePuddleGroupExistsAt(Vector3 position)
+    private void AddWaterAt(Vector3 position)
     {
         //Debug.Log("Ensuring a puddle group is at " + position);
 
@@ -45,19 +39,41 @@ public class Floor : MonoBehaviour
         if (puddleGroup)
         {
             //Debug.Log("Puddle group already at " + coords + ": " + puddlePercentage);
-            if (puddleGroup.IsFull())
-            {
-                Grid.Coords adjacentCoords = puddleGroup.HeadCoords() + new Grid.Coords(1, 0);
-                PuddleGroup adjacentGroup = SpawnPuddleGroup(adjacentCoords);
-                puddleGroup.SetOverflowGroup(adjacentGroup);
-            }
-            puddleGroup.Increment();
+            IncrementExistingPuddleGroup(puddleGroup);
         }
         else
         {
             //Debug.Log("Spawning new puddle group at " + coords);
             SpawnPuddleGroup(coords);
         }
+    }
+
+    private void IncrementExistingPuddleGroup(PuddleGroup puddleGroup)
+    {
+        if (puddleGroup.IsFull())
+        {
+            Grid.Coords overflowOffset = new Grid.Coords(
+                UnityEngine.Random.Range(0, 2), // 0-1
+                UnityEngine.Random.Range(0, 2)  // 0-1
+            );
+            Grid.Coords adjacentCoords = puddleGroup.HeadCoords() + overflowOffset;
+
+            if (!HasPuddleGroupAt(adjacentCoords))
+            {
+                PuddleGroup adjacentGroup = SpawnPuddleGroup(adjacentCoords);
+                puddleGroup.SetOverflowGroup(adjacentGroup);
+                puddleGroup.Increment();
+            }
+        }
+        else
+        {
+            puddleGroup.Increment();
+        }
+    }
+
+    private bool HasPuddleGroupAt(Grid.Coords coords)
+    {
+        return puddleGroups[coords.x, coords.y] != null;
     }
 
     private PuddleGroup SpawnPuddleGroup(Grid.Coords coords)
