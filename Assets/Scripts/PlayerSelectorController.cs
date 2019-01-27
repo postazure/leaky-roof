@@ -55,14 +55,17 @@ public class PlayerSelectorController : MonoBehaviour
             // Attach an object to push
             if (selectedObject.GetComponent<Pushable>())
             {
-                pushedObject = selectedObject.GetComponent<Rigidbody>();
-                pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
-                //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    pushedObject = selectedObject.GetComponent<Rigidbody>();
+                    pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
+                    //pushedObject.constraints = RigidbodyConstraints.FreezeRotation;
 
-                isPushing = true;
+                    isPushing = true;
 
-                float massFromDraggedItem = selectedObject.GetComponentsInChildren<Rigidbody>()[0].mass;
-                FindObjectOfType<PlayerController>().AddMass(massFromDraggedItem / 3f);
+                    float massFromDraggedItem = selectedObject.GetComponentsInChildren<Rigidbody>()[0].mass;
+                    FindObjectOfType<PlayerController>().AddMass(massFromDraggedItem / 3f);
+                }
             }
         }
 
