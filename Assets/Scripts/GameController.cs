@@ -40,7 +40,9 @@ public class GameController : MonoBehaviour
 
         if (doEndGame)
         {
+            SceneController.instance.LoadNextScene();
             print("all items have been discovered");
+
         }
     }
 }
