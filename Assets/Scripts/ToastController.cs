@@ -20,18 +20,26 @@ public class ToastController : MonoBehaviour
     }
 
     private double? toastTimeStart;
+    private float defaultToastDuration;
 
     private void Start()
     {
         toastContainer.SetActive(false);
+        defaultToastDuration = toastDurationInSeconds;
     }
 
     public void PublishToast(string message)
     {
-        var toast = new Toast { description = message };
-        DisplayToast(toast);
+        PublishToast(message, defaultToastDuration);
     }
-    
+
+    public void PublishToast(string message, float duration)
+    {
+        var toast = new Toast { description = message };
+        DisplayToast(toast, duration);
+    }
+
+
     public void PublishToast(string message, Sprite icon, int score)
     {
         // require a message for toast
@@ -46,7 +54,10 @@ public class ToastController : MonoBehaviour
             icon = icon,
             score = score == 0 ? string.Empty : score.ToString()
         };
-        DisplayToast(toast);
+
+        float duration = score == 0 ? 1.5f : defaultToastDuration;
+
+        DisplayToast(toast, duration);
     }
     
     public void PublishToast(SentimentalItem item)
@@ -67,9 +78,10 @@ public class ToastController : MonoBehaviour
  
     }
 
-    private void DisplayToast(Toast toast)
+    private void DisplayToast(Toast toast, float duration)
     {
         toastContainer.SetActive(true);
+        toastDurationInSeconds = duration;
 
         // Handle Icon
         if (toast.icon == null)
