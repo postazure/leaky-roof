@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6220476787036590633}
   - component: {fileID: 604016293807853882}
   - component: {fileID: 1130926491636851553}
+  - component: {fileID: 5955642574878475685}
   m_Layer: 0
   m_Name: Big Bed
   m_TagString: Untagged
@@ -106,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3bc9d8f0154b448b59a25fa2f36e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashTime: 5
-  percentTrashed: 0
 --- !u!114 &604016293807853882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,9 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentDegraded: 0
-  degradePerSecond: 0.1
   isDegrading: 0
-  degradedColor: {r: 0.03844783, g: 0.1961229, b: 0.9056604, a: 0}
+  isDegraded: 0
 --- !u!114 &1130926491636851553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,4 +134,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98f02035326147afbbc9c041dbad726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  discoveryValue: 0
+  sentimentalItem: {fileID: 0}
+--- !u!114 &5955642574878475685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881169145264980560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa0b1025acb6454082c9d077b3d9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secPerShake: 0.05
+  shakeIntensity: 0.05
+  isShaking: 0
