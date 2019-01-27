@@ -16,15 +16,15 @@ public class Trashable : MonoBehaviour
         initialScale = transform.localScale;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void setTrashing(bool isTrashing)
     {
         this.isTrashing = isTrashing;
+
+        Shakeable shakeable = GetComponent<Shakeable>();
+        if (shakeable)
+        {
+            shakeable.isShaking = isTrashing;
+        }
     }
 
     private void FixedUpdate()
@@ -32,13 +32,13 @@ public class Trashable : MonoBehaviour
         if (isTrashing)
         {
             percentTrashed += Time.fixedDeltaTime / trashTime;
-            CheckIfFullyTrashed();
-            float scale =  (1 - percentTrashed) * 0.5f + 0.5f;
-            gameObject.transform.localScale = new Vector3(scale * initialScale.x, scale * initialScale.y, scale * initialScale.z);
+            DestroyIfFullyTrashed();
+            //float scale =  (1 - percentTrashed) * 0.5f + 0.5f;
+            //gameObject.transform.localScale = new Vector3(scale * initialScale.x, scale * initialScale.y, scale * initialScale.z);
         }
     }
 
-    private void CheckIfFullyTrashed()
+    private void DestroyIfFullyTrashed()
     {
         if (percentTrashed >= 1f)
         {
