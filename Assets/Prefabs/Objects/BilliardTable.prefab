@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 8317771508715958813}
   - component: {fileID: 5943146405918499869}
   - component: {fileID: 7376851463602689082}
+  - component: {fileID: 5104741068245284092}
   m_Layer: 10
   m_Name: BilliardTable
   m_TagString: Untagged
@@ -337,6 +338,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secPerShake: 0.05
   shakeIntensity: 0.05
+--- !u!114 &5104741068245284092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109939190170794212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f3bc9d8f0154b448b59a25fa2f36e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashTime: 2
 --- !u!1 &6089028252600340014
 GameObject:
   m_ObjectHideFlags: 0

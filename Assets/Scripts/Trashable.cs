@@ -5,9 +5,9 @@ using UnityEngine;
 public class Trashable : MonoBehaviour
 {
     private bool isTrashing;
-    private Vector3 initialScale;
+    public float trashTime = 1f;
 
-    private float trashTime = 1f;
+    private Vector3 initialScale;
     private float percentTrashed = 0f;
 
     // Start is called before the first frame update
