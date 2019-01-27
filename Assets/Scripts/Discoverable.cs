@@ -17,19 +17,20 @@ public class Discoverable : MonoBehaviour
         toastController = FindObjectOfType<ToastController>();
         scoreController = FindObjectOfType<ScoreController>();
 
-    }
+        // If sentimentalItem not set, defaults to nothing to see here
+        if (sentimentalItem == null)
+        {
+            GameObject nothingItemGO = GameObject.Find("Nothing To See Here");
+            if (nothingItemGO != null)
+                sentimentalItem = nothingItemGO.GetComponent<SentimentalItem>();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public bool hasBeenDiscovered ()
     {
         return isDiscovered;
     }
-
 
     public virtual bool Discover()
     {
@@ -58,7 +59,7 @@ public class Discoverable : MonoBehaviour
             }
             if (toastController != null)
             {
-                toastController.PublishToast("+" + discoveryValue + " Sentiment");
+                toastController.PublishToast(sentimentalItem);
             }
 
             //// change mesh state to reflect discovery, if meshes exist
