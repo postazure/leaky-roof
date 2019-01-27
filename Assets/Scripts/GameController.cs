@@ -10,9 +10,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         discoverables = FindObjectsOfType<Discoverable>();
-
-        print(discoverables.Length);
-
     }
 
     // Update is called once per frame
@@ -27,8 +24,6 @@ public class GameController : MonoBehaviour
 
                 if (!obj.hasBeenDiscovered())
                 {
-                    print(obj.name);
-
                     doEndGame = false;
                     return;
                 }
