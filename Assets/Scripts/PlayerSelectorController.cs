@@ -23,21 +23,13 @@ public class PlayerSelectorController : MonoBehaviour
             Trashable trashable = selectedObject.GetComponent<Trashable>();
             if (trashable != null)
             {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    trashable.setTrashing(true);
-                }
-                else if (Input.GetKeyUp(KeyCode.F))
-                {
-                    trashable.setTrashing(false);
-                }
+                trashable.setTrashing(Input.GetButton("Trash"));
             }
 
-            var canPush = false;
             var discoverable = selectedObject.GetComponent<Discoverable>();
             if (discoverable != null)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Interact"))
                 {
 
                     var wasDiscovered = discoverable.Discover();
@@ -55,7 +47,7 @@ public class PlayerSelectorController : MonoBehaviour
             // Attach an object to push
             if (selectedObject.GetComponent<Pushable>())
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Interact"))
                 {
                     pushedObject = selectedObject.GetComponent<Rigidbody>();
                     pushedObject.GetComponent<Pushable>().AttachToPlayer(transform.parent.gameObject);
@@ -70,7 +62,7 @@ public class PlayerSelectorController : MonoBehaviour
         }
 
         // Let go of an object I'm pushing
-        if (isPushing && Input.GetKeyUp(KeyCode.Space))
+        if (isPushing && Input.GetButtonUp("Interact"))
         {
             isPushing = false;
             pushedObject.GetComponent<Pushable>().DetachToPlayer(transform.parent.gameObject);
@@ -91,8 +83,7 @@ public class PlayerSelectorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
-        if(other.gameObject == selectedObject)
+        if (other.gameObject == selectedObject)
         {
             selectedObject = null;
         }

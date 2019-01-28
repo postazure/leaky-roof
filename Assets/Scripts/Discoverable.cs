@@ -60,7 +60,7 @@ public class Discoverable : MonoBehaviour
         {
             if (toastController != null)
             {
-                toastController.PublishToast("Just trash.");
+                toastController.PublishToast("Just trash.", 1.5f);
             }
             return false;
         }
@@ -71,6 +71,7 @@ public class Discoverable : MonoBehaviour
             if (sentimentalItem.value > 0)
             {
                 ScoreController.instance.ScoreItem(sentimentalItem);
+                AudioManager.instance.PlayVFX(AudioManager.VFX.Chime);
             }
 
             if (toastController != null)
