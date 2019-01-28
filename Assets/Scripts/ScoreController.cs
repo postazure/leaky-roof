@@ -15,6 +15,7 @@ public class ScoreController : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
+            DispatchNewScore();
         }
         else
         {
@@ -23,9 +24,19 @@ public class ScoreController : MonoBehaviour
 
     }
 
+    void DispatchNewScore()
+    {
+        SceneController sceneController = SceneController.instance;
+        if (sceneController != null)
+        {
+            sceneController.ScoreDidChange(GetTotalScore());
+        }
+    }
+
     public void ScoreItem(SentimentalItem item)
     {
         foundItems.Add(item);
+        DispatchNewScore();
     }
 
     public string GetScoredItemsString()

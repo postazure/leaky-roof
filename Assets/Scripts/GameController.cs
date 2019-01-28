@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     {
         var doEndGame = true;
         discoverables = FindObjectsOfType<Discoverable>();
-        Debug.Log("Discoverable count=" + discoverables.Length);
+        //Debug.Log("Discoverable count=" + discoverables.Length);
         foreach(Discoverable obj in discoverables) {
             try
             {
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
 
                 if (obj.sentimentalItem != null && obj.sentimentalItem.name != "Nothing To See Here" && !obj.hasBeenDiscovered())
                 {
-                    Debug.Log(obj.sentimentalItem.name + " not found on " + obj.gameObject.name);
+                    //Debug.Log(obj.sentimentalItem.name + " not found on " + obj.gameObject.name);
                     doEndGame = false;
                     return;
                 }
