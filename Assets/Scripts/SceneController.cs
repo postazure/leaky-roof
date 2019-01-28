@@ -30,14 +30,11 @@ public class SceneController : MonoBehaviour
         {
             _instance = this;
             audioSources = GetComponents<AudioSource>();
-            /*
             foreach (AudioSource audioSource in audioSources)
             {
                 Debug.Log("Audio: " + audioSource.clip.name);
             }
-            audioSources[AUDIO_STAGE1].Play();
-            */
-            audioSources[0].Play();  
+            audioSources[AUDIO_TITLE].Play();
             ScoreController scoreController = ScoreController.instance;
             if (scoreController != null)
             {
@@ -55,7 +52,6 @@ public class SceneController : MonoBehaviour
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
-        /*
         switch (nextSceneIndex)
         {
             case SCENE_MAIN:
@@ -67,13 +63,11 @@ public class SceneController : MonoBehaviour
             case SCENE_GAMEOVER:
                 Debug.Log("Stop any music, play Finished track");
                 StopAll();
-                audioSources[AUDIO_FINISHED].Play();
+                //audioSources[AUDIO_FINISHED].Play();
                 break;
         }
-        */
     }
 
-    /*
     void StopAll()
     {
         foreach (AudioSource audioSource in audioSources)
@@ -82,19 +76,17 @@ public class SceneController : MonoBehaviour
             audioSource.Stop();
         }
     }
-    */
 
     public void ScoreDidChange(int newScore)
     {
         Debug.Log("currentScore = " + currentScore + ", newScore=" + newScore);
-        /*
         if (currentScore == 0 && newScore > 0)
         {
             //// transition to stage 2
             Debug.Log("Stop any music, transition to Stage 2");
             StopAll();
-            //audioSources[AUDIO_TRANSITION_TO_2].Play();
-            //audioSources[AUDIO_STAGE2].PlayDelayed(audioSources[AUDIO_TRANSITION_TO_2].clip.length);
+            audioSources[AUDIO_TRANSITION_TO_2].Play();
+            audioSources[AUDIO_STAGE2].PlayDelayed(audioSources[AUDIO_TRANSITION_TO_2].clip.length);
         }
         else if (currentScore < 700 && newScore >= 700)
         {
@@ -103,7 +95,6 @@ public class SceneController : MonoBehaviour
             audioSources[AUDIO_TRANSITION_TO_3].Play();
             audioSources[AUDIO_STAGE3].PlayDelayed(audioSources[AUDIO_TRANSITION_TO_3].clip.length);
         }
-        */
         currentScore = newScore;
     }
 }
