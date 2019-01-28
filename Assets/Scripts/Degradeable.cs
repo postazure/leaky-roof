@@ -12,7 +12,7 @@ public class Degradeable : MonoBehaviour
     public bool isDegrading;
     public bool isDegraded;
 
-    private Color degradedColor = new Color(.1f, .1f, .15f);
+    private Color degradedColor = new Color(.45f, .45f, .9f);
 
     private Color initialColor;
 
