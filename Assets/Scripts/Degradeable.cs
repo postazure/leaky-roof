@@ -61,6 +61,7 @@ public class Degradeable : MonoBehaviour
                     }
                     //// set the soggy state active
                     soggy.gameObject.SetActive(true);
+                    AudioManager.instance.PlayVFX(AudioManager.VFX.Mush);
                 }
 
                 //// destroy Discoverable component if exists

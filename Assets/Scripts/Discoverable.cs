@@ -71,6 +71,7 @@ public class Discoverable : MonoBehaviour
             if (sentimentalItem.value > 0)
             {
                 ScoreController.instance.ScoreItem(sentimentalItem);
+                AudioManager.instance.PlayVFX(AudioManager.VFX.Chime);
             }
 
             if (toastController != null)
