@@ -11,9 +11,10 @@ public class AudioManager : MonoBehaviour {
     public List<AudioClip> mush = new List<AudioClip>();
     public List<AudioClip> boxBreakdown = new List<AudioClip>();
     public List<AudioClip> trashBreakdown = new List<AudioClip>();
+    public AudioClip lightOn;
     public AudioClip pushing;
 
-    public enum VFX { Chime, Mush, BoxBreakdown, TrashBreakdown, Pushing }
+    public enum VFX { Chime, Mush, BoxBreakdown, TrashBreakdown, Pushing, Light }
 
     private AudioSource source;
 
@@ -53,6 +54,9 @@ public class AudioManager : MonoBehaviour {
                 break;
             case VFX.Pushing:
                 clip = pushing;
+                break;
+            case VFX.Light:
+                clip = lightOn;
                 break;
         }
         source.PlayOneShot(clip);

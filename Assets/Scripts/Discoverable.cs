@@ -35,6 +35,7 @@ public class Discoverable : MonoBehaviour
         Light mylight = GetComponentInChildren<Light>();
         if (mylight != null)
         {
+            AudioManager.instance.PlayVFX(AudioManager.VFX.Light);
             if (mylight.intensity > 2)
             {
                 mylight.intensity = 2;
